@@ -1,0 +1,9 @@
+sav_new:
+    path: /new
+    defaults:   {_controller: "AppBundle:Sav:new"}
+    methods:    POST
+ 
+user_all:
+    path: /getAll
+    defaults:   {_controller: "AppBundle:Sav:getAll"}
+    methods:    GET    

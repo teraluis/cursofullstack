@@ -26,6 +26,7 @@ class UserController extends Controller {
     public function newAction(Request $request) {
         $helpers = $this->get("app.helpers");
         $json = $request->get("json", null);
+        var_dump($json);die();
         $params = json_decode($json);
         if ($json != null) {
             $createdAt = new \DateTime("now");
@@ -39,7 +40,7 @@ class UserController extends Controller {
             $email_constraint = new Email();
             $validate_email = $this->get("validator")->validate($email, $email_constraint);
 
-            if ($email != NULL ) {
+            if ($email != NULL && count($validate_email) == 0 && $name != null && $surname != null && $password != null) {
                 $user = new User();
                 $user->setCreatedAt($createdAt);
                 $user->setEmail($email);

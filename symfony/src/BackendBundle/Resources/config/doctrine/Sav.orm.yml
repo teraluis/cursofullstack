@@ -1,0 +1,36 @@
+BackendBundle\Entity\Sav:
+    type: entity
+    table: sav
+    indexes:
+        tittre:
+            columns:
+                - tittre
+        commentaire:
+            columns:
+                - commentaire
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        tittre:
+            type: string
+            nullable: false
+            length: 120
+            options:
+                fixed: false
+        commentaire:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        date:
+            type: date
+            nullable: false
+    lifecycleCallbacks: {  }

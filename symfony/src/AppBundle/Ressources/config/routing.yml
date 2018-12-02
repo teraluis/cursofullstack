@@ -7,3 +7,6 @@ app_user:
 app_video:
     resource: "@AppBundle/Ressources/config/routing/video.yml"
     prefix: /video
+app_sav:
+    resource: "@AppBundle/Ressources/config/routing/sav.yml"
+    prefix: /sav
