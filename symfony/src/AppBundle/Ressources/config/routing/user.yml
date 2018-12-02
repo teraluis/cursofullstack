@@ -11,3 +11,7 @@ user_upload:
     path: /upload-image-user
     defaults:   {_controller: "AppBundle:User:uploadImage"}
     methods:    POST    
+user_all:
+    path: /getAll
+    defaults:   {_controller: "AppBundle:User:getAll"}
+    methods:    GET    

@@ -89,6 +89,15 @@ class UserController extends Controller {
 
         return $helpers->json($data);
     }
+    public function getAllAction(Request $request){
+        $helpers = $this->get("app.helpers");
+        $json = $request->get("json", null);
+
+
+        $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository("BackendBundle:User")->findAll();
+        return $helpers->json($user);
+    }
 
     public function editAction(Request $request) {
         $helpers = $this->get("app.helpers");
